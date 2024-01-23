@@ -24,5 +24,5 @@ def process_data():
 
     return render_template('page2.html', results=results)
     
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
