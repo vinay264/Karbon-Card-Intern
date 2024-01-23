@@ -18,15 +18,11 @@ def process_data():
     if file.filename == '':
         return redirect(request.url)
 
-    # Read the content of the uploaded file
     content = file.read().decode('utf-8')
-
-    # Convert to JSON
     data = json.loads(content)
-
-    # Assuming you have a function to process the data
     results = probe_model_5l_profit(data["data"])
 
     return render_template('page2.html', results=results)
+    
 if __name__ == '__main__':
     app.run(debug=True)
